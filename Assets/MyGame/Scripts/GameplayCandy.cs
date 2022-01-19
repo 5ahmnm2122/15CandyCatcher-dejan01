@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gameplay : MonoBehaviour
+public class GameplayCandy : MonoBehaviour
 {
 
 
     public GameObject candyOriginal;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObject", 2, 1);
-       
+        InvokeRepeating("SpawnObjectCandy", 0, 2);
     }
 
 
@@ -32,8 +32,9 @@ public class Gameplay : MonoBehaviour
 
     }
 
-    void SpawnObject()
+    void SpawnObjectCandy()
     {
-        Instantiate(candyOriginal, GetSpawnPoint(), Quaternion.identity); 
+        Instantiate(candyOriginal, GetSpawnPoint(), Quaternion.identity);
+    
     }
 }
