@@ -5,19 +5,24 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
-    int timeUpdate;
-    int timeStart;
+    public float timeStart = 60;
+    public Text timeText;
 
-    void Start()
+
+    void Update()
     {
-        for (int i = 60; i > 0; i--) {
-            timeUpdate = timeStart - 1;
-            timeStart = timeStart - 1;
-            Debug.Log(timeUpdate);
-
-
+        if(timeStart < 61)
+        {
+            timeStart -= Time.deltaTime;
         }
+
+        int timeUpdate = (int) timeStart;
+        timeText.text = timeUpdate.ToString();
+        Debug.Log(timeUpdate);
+
     }
+
+
+    
 
 }
