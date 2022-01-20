@@ -7,13 +7,16 @@ using UnityEngine.SceneManagement;
 public class PlayerName : MonoBehaviour
 {
     public Text playersName;
+    public InputField nameInput;
 
     public static string nameOfPlayer;
+
 
     private void Update()
     {
         nameOfPlayer = playersName.text;
-        Debug.Log(nameOfPlayer);
+
+
     }
 
     public void OnMouseDown()
@@ -21,6 +24,14 @@ public class PlayerName : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+
+    public void Reset()
+    {
+
+        var InputField = nameInput.GetComponent<InputField>();
+        InputField.text = "";
+  
+    }
 
 
 }
