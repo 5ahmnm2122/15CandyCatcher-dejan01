@@ -14,6 +14,15 @@ public class Results : MonoBehaviour
     {
        punkte.text = Score.scoreUpdate.ToString();
        spielerName.text = PlayerName.nameOfPlayer;
+
+        if(Score.winOrLoose == 0)
+        {
+            resultat.text = "Verloren";
+        }
+        else
+        {
+            resultat.text = "Gewonnen";
+        }
     }
 
 }

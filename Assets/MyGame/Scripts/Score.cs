@@ -12,6 +12,9 @@ public class Score : MonoBehaviour
     public Text playersName;
  
     public static int scoreUpdate = 1;
+
+    public static int winOrLoose;
+
    
     void Start()
     {
@@ -32,6 +35,9 @@ public class Score : MonoBehaviour
             SceneManager.LoadScene("EndScene");
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
+            winOrLoose = 0;
+
+    
         }
 
 
@@ -77,7 +83,12 @@ public class Score : MonoBehaviour
   
             SceneManager.LoadScene("EndScene");
             Debug.Log("GameOver");
+            winOrLoose = 0; //0 bedeutet verloren
         }
+
+
     }
+
+
 
 }

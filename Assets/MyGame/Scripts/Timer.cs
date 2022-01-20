@@ -23,6 +23,13 @@ public class Timer : MonoBehaviour
         if(timeStart < 1)
         {
             SceneManager.LoadScene("EndScene");
+           
+        }
+
+        if(timeStart < 1 && Score.scoreUpdate >= 1)
+        {
+            Score.winOrLoose = 1; //1 bedeutet gewonnen
+            Debug.Log("gewonnen");
         }
         
     }

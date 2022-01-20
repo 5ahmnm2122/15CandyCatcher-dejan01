@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28444db89a9104a9c9980cff1bbd5bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 60
+  timeStart: 5
   timeText: {fileID: 1306860200}
 --- !u!114 &1471998692
 MonoBehaviour:
