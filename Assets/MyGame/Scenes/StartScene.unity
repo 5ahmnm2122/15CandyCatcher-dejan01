@@ -941,6 +941,7 @@ GameObject:
   - component: {fileID: 1794966108}
   - component: {fileID: 1794966107}
   - component: {fileID: 1794966110}
+  - component: {fileID: 1794966111}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1012,9 +1013,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794966110}
-        m_TargetAssemblyTypeName: LoadMainScene, Assembly-CSharp
-        m_MethodName: NextScene
+      - m_Target: {fileID: 1794966111}
+        m_TargetAssemblyTypeName: PlayerName, Assembly-CSharp
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1074,3 +1075,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdc819295609400c87f400877502305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1794966111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794966105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe040105959eb45fbb523a023b07a43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersName: {fileID: 1351886617}
