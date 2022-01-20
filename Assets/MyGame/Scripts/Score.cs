@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-    /*public GameObject candy;
-    public GameObject bombe;
-    public GameObject player;*/
-    int scoreStart = 0;
+ 
     int scoreUpdate;
 
 
@@ -17,15 +14,13 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText.text = "Score: ";
+        Invoke("StartGameOver", 5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Ermöglicht, dass zu Beginn Game Over Screen nicht aufploppt, weil am Anfang score = 0
+    void StartGameOver()
     {
-
-        Debug.Log(scoreUpdate);
-
-        if(scoreUpdate < 1)
+        if (scoreUpdate < 1)
         {
             //Game Over
             Debug.Log("GameOver");
@@ -41,6 +36,8 @@ public class Score : MonoBehaviour
             scoreUpdate = scoreUpdate + 1;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
+            //Debug.Log("collision");
+            StartGameOver();
         }
 
 
@@ -64,7 +61,7 @@ public class Score : MonoBehaviour
         if (collision.gameObject.CompareTag("Worm"))
         {
            
-            scoreUpdate = scoreUpdate - 5;
+            scoreUpdate = scoreUpdate - 2;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
         }
