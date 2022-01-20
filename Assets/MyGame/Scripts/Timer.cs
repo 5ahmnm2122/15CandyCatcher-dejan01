@@ -18,8 +18,12 @@ public class Timer : MonoBehaviour
 
         int timeUpdate = (int) timeStart;
         timeText.text = timeUpdate.ToString();
-        Debug.Log(timeUpdate);
+        
 
+        /*if(timeStart < 1)
+        {
+           // Time OUT
+        }*/
     }
 
 

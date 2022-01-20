@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5380329357506695679}
   - component: {fileID: 5511865197167044209}
-  - component: {fileID: 1589988632180140180}
   - component: {fileID: -5473789076714399341}
+  - component: {fileID: 1589988632180140180}
   m_Layer: 0
   m_Name: candyPrefab
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &-5473789076714399341
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122629437254661482}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5477396}
+  m_Size: {x: 5.1199994, y: 8.21548}
+  m_Direction: 0
 --- !u!50 &1589988632180140180
 Rigidbody2D:
   serializedVersion: 4
@@ -105,19 +121,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &-5473789076714399341
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122629437254661482}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.5477396}
-  m_Size: {x: 5.1199994, y: 8.21548}
-  m_Direction: 0
