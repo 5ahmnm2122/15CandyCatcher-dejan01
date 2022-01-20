@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-    public GameObject candy;
+    /*public GameObject candy;
     public GameObject bombe;
-    public GameObject player;
-    int score = 0;
-
-    //public Collider2D col;
+    public GameObject player;*/
+    int scoreStart = 0;
+    int scoreUpdate;
 
 
    
@@ -24,19 +23,54 @@ public class Score : MonoBehaviour
     void Update()
     {
 
+        Debug.Log(scoreUpdate);
+
+        if(scoreUpdate < 1)
+        {
+            //Game Over
+            Debug.Log("GameOver");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //Bei Collision mit Candy, +1 Score
         if(collision.gameObject.CompareTag("Health"))
         {
-            Debug.Log("geht");
-            score++;
+         
+            scoreUpdate = scoreUpdate + 1;
 
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Score: " + scoreUpdate.ToString();
         }
-        
-        
+
+
+        //Bei Collision mit Bombe, game over
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            //SZENENWECHSEL
+            scoreUpdate = scoreUpdate - 100;
+
+            scoreText.text = "Score: " + scoreUpdate.ToString();
+        }
+
+        if (collision.gameObject.CompareTag("Peach"))
+        {
+       
+            scoreUpdate = scoreUpdate + 4;
+
+            scoreText.text = "Score: " + scoreUpdate.ToString();
+        }
+
+        if (collision.gameObject.CompareTag("Worm"))
+        {
+           
+            scoreUpdate = scoreUpdate - 5;
+
+            scoreText.text = "Score: " + scoreUpdate.ToString();
+        }
+
+
+
     }
 
     
