@@ -8,29 +8,17 @@ public class Score : MonoBehaviour
 {
     public Text scoreText;
 
+    
     public Text playersName;
  
-    int scoreUpdate;
-
-
+    public static int scoreUpdate = 1;
    
     void Start()
     {
-        scoreText.text = "Score: ";
+        scoreText.text = "Score: " + scoreUpdate;
         playersName.text = PlayerName.nameOfPlayer;
-
-        Invoke("Update", 5f);
-    }
-
-    private void Update()
-    {
-        if (scoreUpdate == 0)
-        {
-            //Game Over
-            SceneManager.LoadScene("EndScene");
-            Debug.Log("GameOver");
-        }
-
+     
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -78,8 +66,18 @@ public class Score : MonoBehaviour
         }
 
 
+        
 
     }
 
-    
+    public void Update()
+    {
+        if (scoreUpdate < 1)
+        {
+  
+            SceneManager.LoadScene("EndScene");
+            Debug.Log("GameOver");
+        }
+    }
+
 }
