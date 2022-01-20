@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -16,46 +17,35 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText.text = "Score: ";
-        Invoke("StartGameOver", 5f);
-
         playersName.text = PlayerName.nameOfPlayer;
 
-
-        Debug.Log(PlayerName.nameOfPlayer);
+        Invoke("Update", 5f);
     }
 
-    //Ermöglicht, dass zu Beginn Game Over Screen nicht aufploppt, weil am Anfang score = 0
-    void StartGameOver()
+    private void Update()
     {
-        if (scoreUpdate < 1)
+        if (scoreUpdate == 0)
         {
             //Game Over
+            SceneManager.LoadScene("EndScene");
             Debug.Log("GameOver");
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Bei Collision mit Candy, +1 Score
-        if(collision.gameObject.CompareTag("Health"))
-        {
-         
-            scoreUpdate = scoreUpdate + 1;
-
-            scoreText.text = "Score: " + scoreUpdate.ToString();
-            //Debug.Log("collision");
-            StartGameOver();
-        }
-
+       
 
         //Bei Collision mit Bombe, game over
         if (collision.gameObject.CompareTag("Death"))
         {
-            //SZENENWECHSEL
-            scoreUpdate = scoreUpdate - 100;
+
+            SceneManager.LoadScene("EndScene");
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
         }
+
 
         if (collision.gameObject.CompareTag("Peach"))
         {
@@ -64,6 +54,20 @@ public class Score : MonoBehaviour
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
         }
+
+
+        //Bei Collision mit Candy, +1 Score
+        if(collision.gameObject.CompareTag("Health"))
+        {
+         
+            scoreUpdate = scoreUpdate - 1;
+
+            scoreText.text = "Score: " + scoreUpdate.ToString();
+            //Debug.Log("collision");
+  
+        }
+
+
 
         if (collision.gameObject.CompareTag("Worm"))
         {

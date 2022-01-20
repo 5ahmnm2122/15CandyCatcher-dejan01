@@ -12,17 +12,9 @@ public class GameplayCandy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObjectCandy", 0, 2);
+        InvokeRepeating("SpawnObjectCandy", 3, 4);
     }
 
-
-    /*void CloneCandys(int candyNumber){
-        for(int i = 0; i < candyNumber; i++)
-        {
-            GameObject CandyClone = Instantiate(candyCloneOriginal, Random.Range(30, 50));
-        }
-
-    }*/
 
     Vector2 GetSpawnPoint()
     {

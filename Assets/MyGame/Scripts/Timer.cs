@@ -20,10 +20,7 @@ public class Timer : MonoBehaviour
         timeText.text = timeUpdate.ToString();
         
 
-        /*if(timeStart < 1)
-        {
-           // Time OUT
-        }*/
+        
     }
 
 
