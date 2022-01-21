@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+       /* if (Input.GetKey(KeyCode.LeftArrow))
         {
             var playerX = gameObject.transform.position.x;
             player.transform.position = new Vector2(playerX + speedNegative, -3.52f);
@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
             player.transform.position = new Vector2(playerX + speedPositive, -3.52f);
 
 
-        }
+        }*/
+
+
     }
 }

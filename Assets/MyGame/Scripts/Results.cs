@@ -31,6 +31,7 @@ public class Results : MonoBehaviour
     public void PlayAgain()
     {
         SceneManager.LoadScene("StartScene");
+        Score.scoreUpdate = 0;
     }
 
 }

@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
     
     public Text playersName;
  
-    public static int scoreUpdate = 1;
+    public static int scoreUpdate = 0;
 
     public static int winOrLoose;
 
@@ -20,8 +20,6 @@ public class Score : MonoBehaviour
     {
         scoreText.text = "Score: " + scoreUpdate;
         playersName.text = PlayerName.nameOfPlayer;
-     
-        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -36,6 +34,7 @@ public class Score : MonoBehaviour
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
             winOrLoose = 0;
+            scoreUpdate = 0;
 
     
         }
@@ -47,6 +46,7 @@ public class Score : MonoBehaviour
             scoreUpdate = scoreUpdate + 4;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
+            
         }
 
 
@@ -70,16 +70,24 @@ public class Score : MonoBehaviour
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
         }
-        
 
+
+       /* if (other.tag = "Worm" ||)
+        {
+            Destroy(gameObject);
+
+            
+        }*/
 
         
 
     }
 
+    
+
     public void Update()
     {
-        if (scoreUpdate < 1)
+        if (scoreUpdate < - 20)
         {
   
             SceneManager.LoadScene("EndScene");
