@@ -70,6 +70,7 @@ public class Score : MonoBehaviour
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
         }
+        
 
 
         
