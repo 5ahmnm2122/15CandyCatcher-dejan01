@@ -15,6 +15,8 @@ public class Score : MonoBehaviour
 
     public static int winOrLoose;
 
+    public AudioClip audio;
+
    
     void Start()
     {
