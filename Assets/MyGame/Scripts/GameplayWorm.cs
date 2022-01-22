@@ -11,7 +11,7 @@ public class GameplayWorm : MonoBehaviour
     void Start()
     {
    
-        InvokeRepeating("SpawnObjectWorm", 2, 4);
+        InvokeRepeating("SpawnObjectWorm", 4, 6);
     }
 
 

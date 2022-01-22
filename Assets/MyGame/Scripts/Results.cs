@@ -31,7 +31,7 @@ public class Results : MonoBehaviour
         }
 
        
-        highscoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
 
         if(Score.scoreUpdate > PlayerPrefs.GetInt("Highscore", 0))
         {

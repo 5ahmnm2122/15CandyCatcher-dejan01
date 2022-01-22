@@ -14,13 +14,18 @@ public class Score : MonoBehaviour
 
     public static int winOrLoose; // winOrLoose = 0 bedeutet verloren; = 1 bedeutet gewonnen
 
+
    
+
+
     void Start()
     {
         scoreText.text = "Score: " + scoreUpdate;
         playersName.text = PlayerName.nameOfPlayer;
 
         highscore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
+
+
     }
 
 
@@ -57,8 +62,7 @@ public class Score : MonoBehaviour
          
             scoreUpdate = scoreUpdate + 1;
 
-            scoreText.text = "Score: " + scoreUpdate.ToString();
-            //Debug.Log("collision");
+            scoreText.text = "Score: " + scoreUpdate.ToString();    
   
         }
 
@@ -70,8 +74,6 @@ public class Score : MonoBehaviour
             scoreUpdate = scoreUpdate - 2;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
-
-           // Destroy(GameplayWorm.objectToDestroy);
         }
 
 
@@ -93,5 +95,9 @@ public class Score : MonoBehaviour
 
     
     }
+
+
+
+
 
 }

@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28444db89a9104a9c9980cff1bbd5bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 15
+  timeStart: 60
   timeText: {fileID: 1306860200}
   tenSecondsAudio: {fileID: 1677840184}
 --- !u!114 &1471998692

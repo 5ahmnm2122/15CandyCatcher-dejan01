@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
         }
 
         int timeUpdate = (int) timeStart;
-        timeText.text = timeUpdate.ToString();
+        timeText.text = "Time: " + timeUpdate.ToString();
 
         //Szenenwechsel End Scene
         if(timeStart < 1)
