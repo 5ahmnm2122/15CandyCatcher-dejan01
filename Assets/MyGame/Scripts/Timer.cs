@@ -31,6 +31,11 @@ public class Timer : MonoBehaviour
             Score.winOrLoose = 1; //1 bedeutet gewonnen
             Debug.Log("gewonnen");
         }
+
+        if(timeStart < 11)
+        {
+            timeText.color = Color.red;
+        }
         
     }
 

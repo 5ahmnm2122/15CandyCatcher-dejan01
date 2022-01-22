@@ -69,17 +69,11 @@ public class Score : MonoBehaviour
             scoreUpdate = scoreUpdate - 2;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
+
+            Destroy(GameplayWorm.objectToDestroy);
         }
 
 
-       /* if (other.tag = "Worm" ||)
-        {
-            Destroy(gameObject);
-
-            
-        }*/
-
-        
 
     }
 

@@ -6,9 +6,11 @@ public class GameplayWorm : MonoBehaviour
 {
     public GameObject wormOriginal;
 
+    public static GameObject objectToDestroy;
 
     void Start()
     {
+   
         InvokeRepeating("SpawnObjectWorm", 2, 4);
     }
 
@@ -23,7 +25,12 @@ public class GameplayWorm : MonoBehaviour
 
     void SpawnObjectWorm()
     {
+        //clone
         Instantiate(wormOriginal, GetSpawnPoint(), Quaternion.identity);
 
     }
+
+  
+
+   
 }

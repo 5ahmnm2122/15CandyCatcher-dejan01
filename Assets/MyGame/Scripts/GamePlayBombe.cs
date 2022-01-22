@@ -27,4 +27,7 @@ public class GamePlayBombe : MonoBehaviour
         Instantiate(bombeOriginal, GetSpawnPoint(), Quaternion.identity);
 
     }
+
+
+
 }

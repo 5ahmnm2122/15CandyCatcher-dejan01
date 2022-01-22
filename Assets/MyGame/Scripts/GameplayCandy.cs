@@ -27,6 +27,7 @@ public class GameplayCandy : MonoBehaviour
     void SpawnObjectCandy()
     {
         Instantiate(candyOriginal, GetSpawnPoint(), Quaternion.identity);
-    
+
     }
+
 }
