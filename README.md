@@ -14,8 +14,8 @@ WebGL
 
 ### Screenshots
 
-![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/StartScreenScreenshot1.png)
-![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/StartScreenScreenshot2.png)
+![Screenshots] (Screenshot/StartScreenScreenshot1.png)
+![Screenshots] (Screenshot/StartScreenScreenshot2.png)
 
 
 
