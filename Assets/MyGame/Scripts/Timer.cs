@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio; 
+
+
 
 public class Timer : MonoBehaviour
 {
     public float timeStart = 60;
     public Text timeText;
     public AudioSource tenSecondsAudio;
+  
 
 
     void Update()
@@ -34,21 +36,24 @@ public class Timer : MonoBehaviour
             Debug.Log("gewonnen");
         }
 
-        if(timeStart < 11)
+        if(timeUpdate < 11)
         {
             timeText.color = Color.red;
-            PlayMusic();
         }
-        
+
+
     }
 
-    void PlayMusic()
+    private void Start()
     {
-        tenSecondsAudio.Play();
+        Invoke("PlayAudio", 48.5f);
 
     }
 
-
-
+    void PlayAudio()
+    {
+        
+        tenSecondsAudio.Play();
+    }
 
 }

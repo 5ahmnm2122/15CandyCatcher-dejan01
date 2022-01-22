@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
 
     public static int winOrLoose;
 
-    public AudioClip audio;
+    public static int highscore;
 
    
     void Start()
@@ -91,6 +91,10 @@ public class Score : MonoBehaviour
             winOrLoose = 0; //0 bedeutet verloren
         }
 
+        if(scoreUpdate > 0)
+        {
+            scoreUpdate = highscore;
+        }
 
     }
 
