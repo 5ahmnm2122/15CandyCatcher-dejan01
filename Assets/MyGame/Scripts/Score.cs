@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
     public Text scoreText;
     public Text playersName;
-
+    public Text highscore;
 
     public static int scoreUpdate = 0;
 
@@ -19,6 +19,8 @@ public class Score : MonoBehaviour
     {
         scoreText.text = "Score: " + scoreUpdate;
         playersName.text = PlayerName.nameOfPlayer;
+
+        highscore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
     }
 
 
@@ -53,7 +55,7 @@ public class Score : MonoBehaviour
         if(collision.gameObject.CompareTag("Health"))
         {
          
-            scoreUpdate = scoreUpdate - 1;
+            scoreUpdate = scoreUpdate + 1;
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
             //Debug.Log("collision");
@@ -86,6 +88,8 @@ public class Score : MonoBehaviour
             Debug.Log("GameOver");
             winOrLoose = 0; //0 bedeutet verloren
         }
+
+
 
     
     }

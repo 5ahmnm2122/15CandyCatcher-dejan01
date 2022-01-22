@@ -9,6 +9,9 @@ public class Results : MonoBehaviour
     public Text spielerName;
     public Text punkte;
     public Text resultat;
+    public Text highscoreText;
+
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +30,21 @@ public class Results : MonoBehaviour
             resultat.color = Color.green;
         }
 
-       /* if(Score.scoreUpdate > 0)
-        {
-            highscore = Score.scoreUpdate;
-            highscoreText.text = "Highscore: " + highscore.ToString();
+       
+        highscoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
 
-        }*/
+        if(Score.scoreUpdate > PlayerPrefs.GetInt("Highscore", 0))
+        {
+            PlayerPrefs.SetInt("Highscore", Score.scoreUpdate);
+        }
 
     }
 
+    
+    public void ResetHighscore()
+    {
+        PlayerPrefs.DeleteKey("Highscore");
+    }
 
     public void PlayAgain()
     {
