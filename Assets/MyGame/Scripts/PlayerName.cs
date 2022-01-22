@@ -32,7 +32,6 @@ public class PlayerName : MonoBehaviour
         {
             SceneManager.LoadScene("MainScene");
         }
-
       
     }
 

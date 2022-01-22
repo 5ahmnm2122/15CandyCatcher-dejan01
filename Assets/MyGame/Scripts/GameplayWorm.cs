@@ -27,7 +27,7 @@ public class GameplayWorm : MonoBehaviour
     {
         //clone
         Instantiate(wormOriginal, GetSpawnPoint(), Quaternion.identity);
-
+        
     }
 
   

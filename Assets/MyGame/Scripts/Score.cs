@@ -36,7 +36,6 @@ public class Score : MonoBehaviour
             winOrLoose = 0;
             scoreUpdate = 0;
 
-    
         }
 
 
@@ -73,6 +72,7 @@ public class Score : MonoBehaviour
            // Destroy(GameplayWorm.objectToDestroy);
         }
 
+
     }
 
     
@@ -87,8 +87,7 @@ public class Score : MonoBehaviour
             winOrLoose = 0; //0 bedeutet verloren
         }
 
+    
     }
-   
-
 
 }
