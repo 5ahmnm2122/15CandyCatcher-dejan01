@@ -14,8 +14,8 @@ WebGL
 
 ### Screenshots
 
-![Screenshots] (Screenshot/StartScreenScreenshot1.png)
-![Screenshots] (Screenshot/StartScreenScreenshot2.png)
+![image] (Screenshot/StartScreenScreenshot1.png)
+![image] (Screenshot/StartScreenScreenshot2.png)
 
 
 
