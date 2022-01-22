@@ -9,7 +9,6 @@ public class PlayerName : MonoBehaviour
     public Text playersName;
     public InputField nameInput;
     public Text placeholder;
-    public Text Limit;
     public Button weiter;
     public Button zurück;
  
@@ -24,12 +23,6 @@ public class PlayerName : MonoBehaviour
         if (playersName.text == "")
         {
             InactiveButtons();
-        }
-
-        if (nameInput.characterLimit == 15)
-        {
-            Limit.text = "Zeichen Limit erreicht!";
-            Debug.Log("erreicht");
         }
     }
 
