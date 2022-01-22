@@ -14,8 +14,8 @@ WebGL
 
 ### Screenshots
 
-![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/Bildschirmfoto 2022-01-22 um 17.57.45.png)
-![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/Bildschirmfoto 2022-01-22 um 17.58.48.png)
+![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/StartScreenScreenshot1.png)
+![Screenshots] (https://github.com/5ahmnm2122/15CandyCatcher-dejan01/Screenshot/StartScreenScreenshot2.png)
 
 
 
