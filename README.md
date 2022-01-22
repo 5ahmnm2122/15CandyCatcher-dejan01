@@ -6,7 +6,7 @@
 Candy Catcher Game starring "Wilfried Gruber" as character. Goal is to catch good items by moving the character with "a" or "d" or with the left and right arrow keys. Try to get your best score!
 
 ### Development platform: 
-macOS: Big Sur 11.2.3, Unity 2020.3.18f1, Visual Studio
+macOS: Big Sur 11.2.3, Unity 2020.3.18f1, Visual Studio 2019 for Mac
 
 ### Target platform: 
 WebGL
@@ -14,8 +14,8 @@ WebGL
 
 ### Screenshots
 
-![image] (Screenshot/StartScreenScreenshot1.png)
-![image] (Screenshot/StartScreenScreenshot2.png)
+<img src="Screenshot/StartScreenScreenshot1.png">
+<img src="Screenshot/StartScreenScreenshot2.png">
 
 
 
