@@ -8,6 +8,7 @@ public class PlayerName : MonoBehaviour
 {
     public Text playersName;
     public InputField nameInput;
+ 
 
     public static string nameOfPlayer;
 
@@ -16,12 +17,21 @@ public class PlayerName : MonoBehaviour
     {
         nameOfPlayer = playersName.text;
 
+        //if(playersName.text == "")
+        //{
+
+            
+        //}
+
 
     }
 
     public void OnMouseDown()
     {
-        SceneManager.LoadScene("MainScene");
+        if (playersName.text != "")
+        {
+            SceneManager.LoadScene("MainScene");
+        }
     }
 
 
@@ -32,6 +42,5 @@ public class PlayerName : MonoBehaviour
         InputField.text = "";
   
     }
-
 
 }

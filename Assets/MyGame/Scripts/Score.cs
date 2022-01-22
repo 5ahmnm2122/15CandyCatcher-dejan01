@@ -7,15 +7,12 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-
-    
     public Text playersName;
- 
+
+
     public static int scoreUpdate = 0;
 
-    public static int winOrLoose;
-
-    public static int highscore;
+    public static int winOrLoose; // winOrLoose = 0 bedeutet verloren; = 1 bedeutet gewonnen
 
    
     void Start()
@@ -23,6 +20,7 @@ public class Score : MonoBehaviour
         scoreText.text = "Score: " + scoreUpdate;
         playersName.text = PlayerName.nameOfPlayer;
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -72,10 +70,8 @@ public class Score : MonoBehaviour
 
             scoreText.text = "Score: " + scoreUpdate.ToString();
 
-            Destroy(GameplayWorm.objectToDestroy);
+           // Destroy(GameplayWorm.objectToDestroy);
         }
-
-
 
     }
 
@@ -91,13 +87,8 @@ public class Score : MonoBehaviour
             winOrLoose = 0; //0 bedeutet verloren
         }
 
-        if(scoreUpdate > 0)
-        {
-            scoreUpdate = highscore;
-        }
-
     }
-
+   
 
 
 }

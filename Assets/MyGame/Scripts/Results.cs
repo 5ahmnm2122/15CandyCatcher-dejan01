@@ -13,10 +13,10 @@ public class Results : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       punkte.text = "Punkte: " + Score.scoreUpdate.ToString();
-       spielerName.text = PlayerName.nameOfPlayer;
+        punkte.text = "Punkte: " + Score.scoreUpdate.ToString();
+        spielerName.text = PlayerName.nameOfPlayer;
 
-        if(Score.winOrLoose == 0)
+        if (Score.winOrLoose == 0)
         {
             resultat.text = "Verloren";
             resultat.color = Color.red;
@@ -26,7 +26,16 @@ public class Results : MonoBehaviour
             resultat.text = "Gewonnen";
             resultat.color = Color.green;
         }
+
+       /* if(Score.scoreUpdate > 0)
+        {
+            highscore = Score.scoreUpdate;
+            highscoreText.text = "Highscore: " + highscore.ToString();
+
+        }*/
+
     }
+
 
     public void PlayAgain()
     {
@@ -34,4 +43,6 @@ public class Results : MonoBehaviour
         Score.scoreUpdate = 0;
     }
 
+
+    
 }
