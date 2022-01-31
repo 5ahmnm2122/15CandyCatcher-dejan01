@@ -3,13 +3,12 @@ using UnityEngine;
 public class GameplayCandy : MonoBehaviour
 {
     public GameObject candyOriginal;
-
+    public GameObject player;
 
     void Start()
     {
-        InvokeRepeating("SpawnObjectCandy", 3, 4);
+        InvokeRepeating("SpawnObjectCandy", 2, 2);
     }
-
 
     Vector2 GetSpawnPoint()
     {
@@ -19,7 +18,7 @@ public class GameplayCandy : MonoBehaviour
 
     void SpawnObjectCandy()
     {
-        Instantiate(candyOriginal, GetSpawnPoint(), Quaternion.identity);
-
+       Instantiate(candyOriginal, GetSpawnPoint(), Quaternion.identity);
     }
+
 }

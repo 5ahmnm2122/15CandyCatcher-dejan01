@@ -8,7 +8,7 @@ public class GamePlayPeach : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObjectPeach", 0, 5);
+        InvokeRepeating("SpawnObjectPeach", 1, 2);
     }
 
 

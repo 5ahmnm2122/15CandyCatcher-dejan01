@@ -839,6 +839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyOriginal: {fileID: 1122629437254661482, guid: 16a14904feebd49e78fd675f45ecdfce, type: 3}
+  player: {fileID: 1275105643}
+  instantiatedObj: {fileID: 0}
 --- !u!114 &1471998690
 MonoBehaviour:
   m_ObjectHideFlags: 0

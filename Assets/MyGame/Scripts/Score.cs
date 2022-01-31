@@ -9,14 +9,13 @@ public class Score : MonoBehaviour
     public Text highscore;
 
     public static int scoreUpdate = 0;
-
     public static int winOrLoose; // winOrLoose = 0 bedeutet verloren; = 1 bedeutet gewonnen
 
 
     void Start()
     {
         scoreText.text = "Score: " + scoreUpdate;
-        playersName.text = PlayerName.nameOfPlayer;
+        playersName.text = PlayerPrefs.GetString("Name");
 
         highscore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
     }

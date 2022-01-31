@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     Vector3 movement;
 
   
-    // Update is called once per frame
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

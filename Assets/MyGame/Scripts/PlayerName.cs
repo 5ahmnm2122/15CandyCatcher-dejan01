@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -8,14 +10,10 @@ public class PlayerName : MonoBehaviour
     public InputField nameInput;
     public Button weiter;
     public Button zurück;
- 
-
-    public static string nameOfPlayer;
-
 
     private void Update()
     {
-        nameOfPlayer = playersName.text;
+        PlayerPrefs.SetString("Name", playersName.text);
 
         if (playersName.text == "")
         {
@@ -31,7 +29,6 @@ public class PlayerName : MonoBehaviour
         }
     }
 
-    
     public void Reset()
     {
         var InputField = nameInput.GetComponent<InputField>();

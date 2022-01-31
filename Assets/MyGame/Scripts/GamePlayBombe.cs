@@ -5,7 +5,6 @@ public class GamePlayBombe : MonoBehaviour
     public GameObject bombeOriginal;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("SpawnObjectBombe", 6, 7);

@@ -9,12 +9,11 @@ public class Results : MonoBehaviour
     public Text resultat;
     public Text highscoreText;
 
- 
-    // Start is called before the first frame update
+
     void Start()
     {
         punkte.text = "Punkte: " + Score.scoreUpdate.ToString();
-        spielerName.text = PlayerName.nameOfPlayer;
+        spielerName.text = PlayerPrefs.GetString("Name");
 
         if (Score.winOrLoose == 0)
         {
