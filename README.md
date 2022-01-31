@@ -44,6 +44,6 @@ finished - 100%
 ### Lessons learned:
 - learned how to use static variables and how to call them in other scripts 
 - created methods which i called in OnClick Events
-- "try to group code instead of creating to many scripts"
+- "try to group code instead of creating too many scripts"
 
 Copyright by Dejan Klickovic
