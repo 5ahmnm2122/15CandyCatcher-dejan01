@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,7 +10,6 @@ public class Results : MonoBehaviour
     public Text highscoreText;
 
  
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +27,14 @@ public class Results : MonoBehaviour
             resultat.color = Color.green;
         }
 
-       
         highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
+
 
         if(Score.scoreUpdate > PlayerPrefs.GetInt("Highscore", 0))
         {
             PlayerPrefs.SetInt("Highscore", Score.scoreUpdate);
         }
-
     }
-
     
     public void ResetHighscore()
     {
@@ -51,7 +46,4 @@ public class Results : MonoBehaviour
         SceneManager.LoadScene("StartScene");
         Score.scoreUpdate = 0;
     }
-
-
-    
 }

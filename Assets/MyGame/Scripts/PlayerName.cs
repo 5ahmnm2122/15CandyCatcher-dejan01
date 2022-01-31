@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -8,7 +6,6 @@ public class PlayerName : MonoBehaviour
 {
     public Text playersName;
     public InputField nameInput;
-    public Text placeholder;
     public Button weiter;
     public Button zurück;
  
@@ -30,18 +27,15 @@ public class PlayerName : MonoBehaviour
     {
         if (playersName.text != "")
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("InfoScreen");
         }
-      
     }
 
     
     public void Reset()
     {
-
         var InputField = nameInput.GetComponent<InputField>();
         InputField.text = "";
-  
     }
 
     public void InactiveButtons()

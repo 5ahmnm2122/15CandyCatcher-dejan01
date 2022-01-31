@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 
 public class Timer : MonoBehaviour
 {
@@ -12,7 +9,6 @@ public class Timer : MonoBehaviour
 
     public AudioSource tenSecondsAudio;
   
-
 
     void Update()
     {
@@ -50,13 +46,10 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         Invoke("PlayAudio", 48.5f);
-
     }
 
     void PlayAudio()
     {
         tenSecondsAudio.Play();
-    }
-
-    
+    }    
 }
