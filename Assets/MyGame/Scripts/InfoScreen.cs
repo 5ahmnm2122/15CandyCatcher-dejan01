@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class InfoScreen : MonoBehaviour
 {
-    public Button spielenButto;
 
     public void LadeSpielSzene()
     {

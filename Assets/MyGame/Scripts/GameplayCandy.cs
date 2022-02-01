@@ -3,7 +3,6 @@ using UnityEngine;
 public class GameplayCandy : MonoBehaviour
 {
     public GameObject candyOriginal;
-    public GameObject player;
 
     void Start()
     {

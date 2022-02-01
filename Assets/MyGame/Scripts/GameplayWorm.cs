@@ -3,7 +3,6 @@ using UnityEngine;
 public class GameplayWorm : MonoBehaviour
 {
     public GameObject wormOriginal;
-    public static GameObject objectToDestroy;
 
 
     void Start()
